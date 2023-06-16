@@ -1,0 +1,92 @@
+.faq__title {
+  @extend %title;
+  font-size: 24px;
+  text-align: center;
+  @media screen and (min-width: $tablet) {
+    font-size: 36px;
+  }
+  @media screen and (min-width: $desktop) {
+    font-size: 40px;
+  }
+}
+.faq__descr {
+  text-align: center;
+  margin-bottom: 30px;
+  @media screen and (min-width: $desktop) {
+    width: 630px;
+    font-size: 16px;
+    line-height: 1.62;
+    margin: 0 auto;
+    margin-bottom: 129px;
+  }
+}
+
+.faq__wrapper {
+  margin: 0 auto;
+  @media screen and (min-width: $desktop) {
+    width: 800px;
+  }
+}
+
+.faq__list {
+  cursor: pointer;
+}
+
+.faq__item {
+  display: flex;
+  align-items: center;
+  height: 58px;
+  position: relative;
+  width: 100%;
+  border: none;
+  font-size: 12px;
+  font-weight: 500;
+  text-align: left;
+  line-height: 2.9;
+  background-color: #f5f7fa;
+  color: $secondary-font-color;
+
+  @media screen and (min-width: $desktop) {
+    font-size: 20px;
+    line-height: 2.9;
+  }
+}
+.faq__item::after {
+  content: url(../images/Plus.svg);
+
+  position: absolute;
+  right: 15;
+  transition: transform 250ms linear;
+}
+
+.faq__text {
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+  height: 0;
+  transition: all 0.5s;
+  font-size: 12px;
+  line-height: 1.62;
+  margin: 10px 0;
+  border-radius: 30px;
+  color: currentColor;
+
+  @media screen and (min-width: $desktop) {
+    font-size: 16px;
+    line-height: 1.62;
+  }
+}
+
+.active .faq__text {
+  height: 100px;
+  transition: height 1s;
+
+  @media screen and (min-width: $desktop) {
+    height: 150px;
+  }
+}
+
+.active .faq__item::after {
+  display: none;
+}

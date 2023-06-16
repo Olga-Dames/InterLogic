@@ -1,0 +1,135 @@
+.ultimate {
+  display: none;
+
+  @include tablet {
+    display: block;
+  }
+  @include desktop {
+    min-width: 1600px;
+    background-repeat: no-repeat;
+    background-position: right center;
+    background-size: 665px 730px;
+    background-image: url(../images/ultimate/ultimate-bg.png);
+
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: url(../images/ultimate/ultimate-bg@2x.png);
+    }
+  }
+}
+
+.ultimate__container {
+  padding: 0 50px;
+}
+
+.title__wrapper {
+  @media screen and (min-width: $desktop) {
+    width: 390px;
+  }
+}
+.ultimate__title {
+  @extend %title;
+  text-align: center;
+  @media screen and (min-width: $desktop) {
+    text-align: left;
+  }
+}
+
+.ultimate__heading {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 2.9;
+  color: $secondary-font-color;
+}
+
+.ultimate__descr {
+  margin-bottom: 70px;
+  font-size: 16px;
+  line-height: 1.62;
+}
+
+.ultimate__text {
+  font-size: 16px;
+  line-height: 1.62;
+}
+
+.ultimate__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+  text-align: center;
+  @media screen and (min-width: $desktop) {
+    width: 630px;
+    text-align: left;
+    gap: 80px;
+  }
+}
+
+.ultimate__item {
+  width: 270px;
+}
+
+.ultimate__icon-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+  width: 88px;
+  height: 88px;
+  border-radius: 50%;
+  &--one {
+    background-color: rgba(255, 236, 239, 0.3);
+  }
+  &--two {
+    background-color: rgba(244, 244, 255, 0.3);
+  }
+  &--three {
+    background-color: rgba(255, 246, 211, 0.3);
+  }
+  &--four {
+    background-color: rgba(253, 238, 228, 0.3);
+  }
+  @media screen and (min-width: $tablet) {
+    margin: 0 auto;
+  }
+  @media screen and (min-width: $desktop) {
+    margin: 0;
+  }
+}
+
+.ultimate__btn {
+  @extend %btn;
+  display: none;
+  transition: all 0.8s ease 0s;
+
+  @include tablet {
+    margin-top: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 170px;
+    height: 57px;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 2.75;
+    color: $button-text-color;
+    text-align: center;
+    background-color: $btn-default-color;
+    border-radius: $btn-border-radius;
+    border: none;
+  }
+  &:hover {
+    background-color: $logo-accent-color;
+    animation: shake-top 0.8s cubic-bezier(0.455, 0.03, 0.515, 0.955) both;
+  }
+  &:focus {
+    background-color: $logo-accent-color;
+    color: $button-light-color;
+    animation: shake-top 0.8s cubic-bezier(0.455, 0.03, 0.515, 0.955) both;
+  }
+  &:disabled {
+    color: $primary-font-color;
+  }
+}

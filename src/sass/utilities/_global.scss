@@ -1,0 +1,81 @@
+html {
+  scroll-behavior: smooth;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+p {
+  margin: 0;
+}
+
+img {
+  display: block;
+  height: auto;
+}
+
+ul {
+  padding: 0;
+  list-style: none;
+}
+
+a,
+body,
+button,
+label {
+  cursor: url('../images/Cursor.svg'), auto;
+}
+
+a {
+  padding: 0;
+  font-style: normal;
+  text-decoration: none;
+}
+
+button {
+  outline: transparent;
+}
+body {
+  font-family: $primary-font;
+  font-size: 14px;
+  color: $primary-font-color;
+  line-height: 1.25;
+  letter-spacing: 0.04;
+  background-color: $solid-bg-color;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0 20px;
+  @include mobile {
+    max-width: 480px;
+  
+  }
+
+  @include tablet {
+    max-width: 768px;
+    padding: 0 32px;
+  }
+
+  @include desktop {
+    max-width: 1170px;
+    padding: 0 70px;
+  }
+}
+.section {
+  margin: 0 auto;
+  padding: 30px 0;
+
+  @include tablet {
+    padding: 50px 0;
+  }
+
+  @include desktop {
+    width: 1600px;
+    padding: 100px 0;
+  }
+}

@@ -1,0 +1,107 @@
+.section-advantages {
+  @media screen and (min-width: $desktop) {
+    padding-top: 200px;
+  }
+}
+
+.advantages__title {
+  @extend %title;
+  margin: 0 auto;
+  margin-bottom: 30px;
+  text-align: center;
+  font-size: 24px;
+  @media screen and (min-width: $tablet) {
+    font-size: 36px;
+    width: 440px;
+  }
+}
+
+.advantages__descr {
+  text-align: center;
+  font-size: 14px;
+  line-height: 1.25;
+  margin-bottom: 30px;
+  @media screen and (min-width: $desktop) {
+    margin: 0 auto;
+    margin-bottom: 115px;
+    width: 640px;
+    font-size: 16px;
+    line-height: 1.62;
+  }
+}
+
+.advantages__list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  @media screen and (min-width: $tablet) {
+    flex-direction: row;
+    justify-content: center;
+    gap: 30px;
+  }
+  @media screen and (min-width: $desktop) {
+    flex-direction: row;
+    justify-content: center;
+    gap: 90px;
+  }
+}
+
+.advantages__item {
+  width: 275px;
+  @media screen and (min-width: $tablet) {
+    width: 205px;
+  }
+  @media screen and (min-width: $desktop) {
+    width: 275px;
+  }
+}
+
+.advantages__heading {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 2.9;
+  text-align: center;
+  color: $secondary-font-color;
+}
+
+.advantages__text {
+  text-align: center;
+  font-size: 14px;
+  line-height: 1.25;
+  @media screen and (min-width: $desktop) {
+    font-size: 16px;
+    line-height: 1.62;
+  }
+}
+
+.advantages__icon-wrapper {
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+  width: 88px;
+  height: 88px;
+  border-radius: 50%;
+
+  &--one {
+    background-color: rgba(255, 236, 239, 0.3);
+  }
+  &--two {
+    background-color: rgba(234, 249, 255, 0.3);
+  }
+  &--three {
+    background-color: rgba(255, 246, 211, 0.3);
+  }
+  &--four {
+    background-color: rgba(228, 255, 238, 0.3);
+  }
+  &--five {
+    background-color: rgba(244, 244, 255, 0.3);
+  }
+  &--six {
+    background-color: rgba(253, 238, 228, 0.3);
+  }
+}

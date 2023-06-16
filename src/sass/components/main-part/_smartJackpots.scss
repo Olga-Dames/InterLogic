@@ -1,0 +1,120 @@
+.section__jackpot {
+  margin: 0 auto;
+  padding-top: 15px;
+  @media screen and (min-width: $tablet) {
+    padding-top: 50px;
+  }
+  @media screen and (min-width: $desktop) {
+    padding-top: 180px;
+  }
+}
+
+.jackpot__wrapper {
+  @media screen and (min-width: $tablet) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  @media screen and (min-width: $desktop) {
+    width: 1000px;
+    margin-bottom: 125px;
+  }
+}
+
+.jackpot__list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  @media screen and (min-width: $tablet) {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.jackpot__title {
+  @extend %title;
+  display: none;
+  @media screen and (min-width: $tablet) {
+    display: block;
+  }
+  @media screen and (min-width: $desktop) {
+    margin-bottom: 0;
+    padding-right: 100px;
+    font-size: 40px;
+    line-height: 1.25;
+    color: $secondary-font-color;
+    border-right: 1px solid $primary-font-color;
+  }
+}
+
+.jackpot__descr {
+  display: none;
+  @media screen and (min-width: $desktop) {
+    display: block;
+    min-width: 460px;
+    padding-left: 48px;
+    font-size: 16px;
+    line-height: 1.62;
+  }
+}
+
+.jackpot__list-title {
+  margin-top: 16px;
+  font-size: 20px;
+  line-height: 2.9;
+  @media screen and (min-width: $tablet) {
+    font-size: 14px;
+    line-height: 2.9;
+  }
+  @media screen and (min-width: $desktop) {
+    font-size: 20px;
+    line-height: 2.9;
+  }
+  &--first {
+    color: $first-icon-color;
+  }
+  &--second {
+    color: $second-icon-color;
+  }
+  &--third {
+    color: $third-icon-color;
+  }
+}
+
+.jackpot__list-item {
+  text-align: center;
+  margin-bottom: 15px;
+  @media screen and (min-width: $tablet) {
+    width: 215px;
+  }
+  @media screen and (min-width: $desktop) {
+    margin-bottom: 0;
+    text-align: left;
+    width: 265px;
+  }
+}
+
+.jackpot__icon {
+  &--first {
+    fill: $first-icon-color;
+  }
+  &--second {
+    fill: $second-icon-color;
+  }
+  &--third {
+    fill: $third-icon-color;
+  }
+}
+
+.jackpot__paragraph {
+  font-size: 16px;
+  line-height: 1.62;
+  @media screen and (min-width: $tablet) {
+    font-size: 12px;
+    line-height: 1.25;
+  }
+  @media screen and (min-width: $desktop) {
+    font-size: 16px;
+    line-height: 1.62;
+  }
+}

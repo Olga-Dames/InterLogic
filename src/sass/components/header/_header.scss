@@ -1,0 +1,159 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 15px;
+
+  @include tablet {
+    padding: 20px 10px;
+  }
+
+  @include desktop {
+    width: 1170px;
+    padding: 50px 0 20px 0;
+  }
+}
+.section__header {
+  background-color: $solid-bg-color;
+
+  @include tablet {
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+
+    &.no-transparency {
+      background-color: rgba(36, 47, 81, 0.5);
+      backdrop-filter: blur(4px);
+    }
+  }
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 30px;
+  &--partone {
+    color: $logo-accent-color;
+  }
+  &--parttwo {
+    color: $secondary-font-color;
+  }
+}
+
+.header__nav {
+  display: none;
+  @media screen and (min-width: $tablet) {
+    display: flex;
+  }
+  @media screen and (min-width: $desktop) {
+    margin-left: 200px;
+  }
+}
+
+.header__nav-list {
+  @media screen and (min-width: $tablet) {
+    &:not(:last-child) {
+      margin-right: 20px;
+    }
+  }
+  @media screen and (min-width: $desktop) {
+    &:not(:last-child) {
+      margin-right: 36px;
+    }
+  }
+  
+}
+
+.header__nav-link {
+  transition: all 0.8s ease 0s;
+  color: $secondary-font-color;
+  line-height: 2.75;
+  @media screen and (min-width: $tablet) {
+    font-size: 14px;
+    padding: 20px 0;
+  }
+  @media screen and (min-width: $desktop) {
+    font-size: 16px;
+
+  }
+
+  &:hover,
+  &:focus {
+    color: $logo-accent-color;
+  }
+}
+
+.no-transparency .header__nav-link,
+.no-transparency .logo--parttwo {
+  color: #fff;
+}
+
+.header__btn {
+  @extend %btn;
+  display: none;
+  transition: all 0.8s ease 0s;
+
+  @include tablet {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 170px;
+    height: 57px;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 2.75;
+    color: $button-text-color;
+    text-align: center;
+    background-color: $btn-default-color;
+    border-radius: $btn-border-radius;
+    border: none;
+  }
+  &:hover {
+    background-color: $logo-accent-color;
+    animation: shake-top 0.8s cubic-bezier(0.455, 0.03, 0.515, 0.955) both;
+  }
+  &:focus {
+    background-color: $logo-accent-color;
+    color: $button-light-color;
+    animation: shake-top 0.8s cubic-bezier(0.455, 0.03, 0.515, 0.955) both;
+  }
+  &:disabled {
+    color: $primary-font-color;
+  }
+}
+
+.header__bt-menu {
+  margin: 0 auto;
+  margin-top: 110px;
+  display: block;
+  gap: 4px;
+  position: relative;
+  min-width: 152px;
+  height: 42px;
+  color: $button-text-color;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 1.29;
+  color: $button-text-color;
+  text-align: center;
+  background-color: $btn-default-color;
+  border-radius: $btn-border-radius;
+  cursor: pointer;
+  border: none;
+
+  @include tablet {
+    display: none;
+  }
+
+  &:hover {
+    background-color: $logo-accent-color;
+  }
+  &:focus {
+    background-color: $logo-accent-color;
+    color: $button-light-color;
+  }
+  &:disabled {
+    color: $primary-font-color;
+  }
+}

@@ -1,0 +1,100 @@
+.section__download {
+  background-color: #edf2f7;
+  background-repeat: no-repeat;
+  // background-position: 100% 40px;
+
+  @media screen and (max-width: 767px) {
+    background-size: 534px 272px;
+    background-position: 200px 120px;
+    background-image: url(../images/download/bg-download.png);
+
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: url(../images/download/bg-download@2.png);
+    }
+  }
+
+  @include tablet {
+    width: 768px;
+    background-position: 70px 70px;
+    background-size: 721px 402px;
+    background-color: $solid-bg-color;
+    background-image: url(../images/download/bg-download.png);
+
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: url(../images/download/bg-download@2.png);
+    }
+  }
+
+  @include desktop {
+    width: 1600px;
+    background-position: 100% 40px;
+    background-size: 834px 472px;
+    background-image: url(../images/download/bg-download.png);
+
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: url(../images/download/bg-download@2.png);
+    }
+  }
+}
+.download {
+  @media screen and (min-width: $tablet) {
+    padding: 0 32px;
+  }
+  @media screen and (min-width: $desktop) {
+    padding: 0 15px;
+  }
+}
+.download__title {
+  @extend %title;
+  margin-bottom: 46px;
+  text-align: center;
+  font-size: 24px;
+  line-height: 1.21;
+  @media screen and (min-width: $tablet) {
+    text-align: left;
+    margin-bottom: 40px;
+    font-size: 36px;
+  }
+  @media screen and (min-width: $desktop) {
+    text-align: left;
+    margin-bottom: 40px;
+    font-size: 48px;
+  }
+}
+.download__descr {
+  margin-bottom: 54px;
+  text-align: center;
+  background-color: #edf2f7;
+  @media screen and (min-width: $tablet) {
+    width: 495px;
+    background-color: transparent;
+    text-align: left;
+  }
+
+  @media screen and (min-width: $desktop) {
+    width: 650px;
+    line-height: 1.62;
+    font-size: 16px;
+    color: $primary-font-color;
+  }
+}
+
+.download__list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  @media screen and (min-width: $tablet) {
+    align-items: flex-start;
+  }
+  @media screen and (min-width: $desktop) {
+    flex-direction: row;
+    gap: 40px;
+  }
+}
